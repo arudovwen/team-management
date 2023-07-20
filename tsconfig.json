@@ -1,0 +1,15 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "declarationDir": "dist",
+    "skipLibCheck": true,
+    "paths": {
+      "@sterlingAuth/*": ["./src/*"]
+    }
+  },
+  "files": ["src/Sterling-team-management.tsx"],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*"]
+}
