@@ -1,10 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../layouts/Layout";
+import { Root } from "../Root";
 import TeamManagement from "../pages/team-management";
 import CreateTeam from "../pages/team-management/create-team/CreateTeam";
 import EditTeam from "../pages/team-management/edit-team/EditTeam";
 
-function Router() {
+export const BasePath = "/team-management";
+export const Router = function () {
   return (
     <BrowserRouter>
       <Routes>
@@ -16,6 +18,4 @@ function Router() {
       </Routes>
     </BrowserRouter>
   );
-}
-
-export default Router;
+};
