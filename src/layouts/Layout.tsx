@@ -2,9 +2,9 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <>
+    <div data-testid="outlet">
       <Outlet />
-    </>
+    </div>
   );
 };
 
