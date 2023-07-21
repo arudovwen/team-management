@@ -4,7 +4,6 @@ const DefinePlugin = require("webpack").DefinePlugin;
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
 
-
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "Sterling",
@@ -39,5 +38,13 @@ module.exports = (webpackConfigEnv, argv) => {
         "process.env": JSON.stringify(dotenv.parsed),
       }),
     ],
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ["postcss-loader"],
+        },
+      ],
+    },
   });
 };
