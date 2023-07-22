@@ -10,7 +10,7 @@ export const Router = function () {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/team-management" element={<Root />}>
+        <Route path="/team-management" element={<Layout />}>
           <Route index element={<TeamManagement />} />
           <Route path="create" element={<CreateTeam />} />
           <Route path="edit" element={<EditTeam />} />
