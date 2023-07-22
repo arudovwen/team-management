@@ -12,7 +12,7 @@
     "typeRoots": [
       "node_modules/@types",
       "src/index.d.ts",
-      "src/@types"
+      "src/types"
     ],
     "resolveJsonModule": true,
     "moduleResolution": "Node",
@@ -21,6 +21,6 @@
     }
   },
   "files": ["src/Sterling-team-management.tsx"],
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "__mocks__"],
   "exclude": ["src/**/*.test*"]
 }

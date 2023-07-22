@@ -1,6 +1,6 @@
 import React from 'react';
 import { auth$ } from '@Sterling/shared';
-import { AuthenticatedUserPayload } from '@app/@types/authenticated-user';
+import { AuthenticatedUserPayload } from '@app/types/authenticated-user';
 
 export const usePermission = () => {
    const [authPayload, setAuthPayload] = React.useState<AuthenticatedUserPayload | null>(null);
