@@ -3,9 +3,9 @@ import React from "react";
 
 export default function TeamManagement() {
   return (
-    <section className="text-4xl w-full bg-[#F7F7F7] h-full min-h-[60vh] flex flex-col">
+    <section className="text-4xl w-full bg-[#F7F7F7] h-full min-h-[100vh] flex flex-col">
       <TopBar />
-      <div className="px-8 flex gap-x-5 w-full flex-1">
+      <div className="px-8 flex gap-x-5 w-full flex-1 py-7">
         <div className="flex-1 flex flex-col">
           <div className="bg-white p-10  border border-[#E5E9EB] mb-7 rounded-lg min-h-[126px]">
             {" "}

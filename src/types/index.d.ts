@@ -4,3 +4,9 @@ export interface MenuItemContentsProps {
    label: string;
    href?: string;
 }
+
+export interface ButtonProps {
+   text: string;
+   icon?: any;
+   classProps?: string;
+}

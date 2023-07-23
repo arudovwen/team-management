@@ -44,6 +44,17 @@ module.exports = (webpackConfigEnv, argv) => {
           test: /\.css$/i,
           use: ["postcss-loader"],
         },
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            // Creates `style` nodes from JS strings
+            "style-loader",
+            // Translates CSS into CommonJS
+            "postcss-loader",
+            // Compiles Sass to CSS
+            "sass-loader",
+          ],
+        },
       ],
     },
   });
