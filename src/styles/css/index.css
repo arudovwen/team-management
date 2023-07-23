@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 .btn {
-    @apply bg-gray-500 flex gap-x-2 items-center active:scale-95 transition ease-in-out duration-300 hover:opacity-90;
-    @apply capitalize text-sm font-semibold text-[#F6F8F9] px-3 py-1;
-    @apply rounded;
+  @apply bg-gray-500 flex gap-x-2 items-center active:scale-95 transition ease-in-out duration-300 hover:opacity-90;
+  @apply capitalize text-sm font-semibold text-[#F6F8F9] px-3 py-1;
+  @apply rounded;
+}
 
-  }
+body {
+  font-size: 1rem;
+}
+
+.border-image {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgba(255,249,34), rgba(255,0,128), rgba(56,2,155,0));
+    border-image-slice: 1;
+}

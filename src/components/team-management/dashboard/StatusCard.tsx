@@ -9,9 +9,14 @@ import {
   RequestOptions,
 } from "../../../constants";
 import Select from "../../forms/Select";
-
-export default function StatusCard() {
-  const [active, setActive] = useState<number>(1);
+import PearLessSvg from "../../../helpers/PearLessSvg";
+export default function StatusCard({
+  category,
+  setCategory,
+}: {
+  category: string;
+  setCategory: (e: string) => void;
+}) {
   const [activeType, setActiveType] = useState<string>("all");
 
   //   Get select value
@@ -20,30 +25,18 @@ export default function StatusCard() {
   }
   return (
     <div className="flex border border-[#E5E9EB] rounded-lg">
-      <svg width="0" height="0">
-        <linearGradient
-          id="pearless-purple"
-          x1="100%"
-          y1="100%"
-          x2="0%"
-          y2="0%"
-        >
-          <stop stopColor="#783B96" offset="0%" />
-          <stop stopColor="#C5593C" offset="100%" />
-        </linearGradient>
-      </svg>
-
+      <PearLessSvg />
       <div className="bg-[#EFEFEF] w-[208px] rounded-l-lg border-r border-[#D0D5DD] overflow-hidden">
         {StatusCategories.map((item, idx) => (
           <button
             key={item.id}
-            onClick={() => setActive(item.id)}
+            onClick={() => setCategory(item.type)}
             className={` ${
-              active === item.id ? "bg-white font-semibold text-[20px]" : ""
+              category === item.type ? "bg-white font-semibold text-[20px]" : ""
             } px-4 py-[19px] text-[18px] text-[#636363] text-left flex gap-x-[5px] items-center leading-[24px] w-full capitalize border-[#D0D5DD] border-b last-of-type:border-b-0 hover:font-semibold hover:bg-gray-50`}
           >
             <AiFillCaretRight
-              className={`${active === item.id ? "visible" : "invisible"}`}
+              className={`${category === item.type ? "visible" : "invisible"}`}
               style={{ fill: "url(#pearless-purple)" }}
             />{" "}
             {item.type}
@@ -52,7 +45,7 @@ export default function StatusCard() {
       </div>
       <div className="flex-1 bg-white py-[10px] px-[22px] rounded-r-lg flex justify-between">
         <div className="flex gap-x-5 py-[14px] pl-[20px]">
-          {(active === 1 ? StatusTypes : StatusRequests).map((item) => (
+          {(category === "teams" ? StatusTypes : StatusRequests).map((item) => (
             <div
               key={`${item.type}-${item.id}`}
               onClick={() => setActiveType(item.type)}
@@ -79,7 +72,7 @@ export default function StatusCard() {
         </div>
         <div>
           <Select
-            options={active === 1 ? TeamOptions : RequestOptions}
+            options={category === "teams" ? TeamOptions : RequestOptions}
             handleSelected={(value: any) => handleSelected(value)}
           />
         </div>
