@@ -10,3 +10,8 @@ export interface ButtonProps {
    icon?: any;
    classProps?: string;
 }
+
+export interface SelectProps {
+   options: array;
+   handleSelected: (value) => void
+}
