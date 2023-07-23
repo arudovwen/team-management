@@ -10,11 +10,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "src/index.d.ts",
-      "src/types"
-    ],
+    "typeRoots": ["node_modules/@types", "src/index.d.ts", "src/types"],
     "resolveJsonModule": true,
     "moduleResolution": "Node",
     "paths": {

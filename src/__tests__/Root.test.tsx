@@ -4,8 +4,6 @@ import { MemoryRouter } from "react-router-dom";
 import { isTokenValid } from "../__mocks__/shared"; // Assuming this is the function to check token validity.
 import { Root } from "../Root";
 
-
-
 // Helper function to wrap the Root component with MemoryRouter
 const renderWithRouter = (component, initialEntries = ["/"]) => {
   return render(

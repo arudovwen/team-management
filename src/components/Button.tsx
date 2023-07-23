@@ -13,7 +13,7 @@ export type ButtonProps = React.DetailedHTMLProps<
 const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
   const { type = "button", className, children, ...rest } = props;
   const merged = clsx("btn", className);
-  
+
   return (
     <button ref={ref} className={merged} {...rest}>
       {children}

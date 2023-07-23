@@ -21,11 +21,11 @@ export default function DropDown({
       case "FaEye":
         return <FaEye className="text-[#3FA2F7]" />;
       case "FaEdit":
-        return <FaEdit className="text-[#D4A62F]"/>;
+        return <FaEdit className="text-[#D4A62F]" />;
       case "FaTrash":
-        return <FaTrash  className="text-[#DC5A5D]" />;
+        return <FaTrash className="text-[#DC5A5D]" />;
       case "FaBan":
-        return <FaBan  className="text-[#DC5A5D]" />;
+        return <FaBan className="text-[#DC5A5D]" />;
       case "FaPlayCircle":
         return <FaPlayCircle className="text-[#2FB755]" />;
 
@@ -60,7 +60,7 @@ export default function DropDown({
                         active ? "bg-[#F9E5E5]" : ""
                       } group flex w-full items-center whitespace-nowrap px-4 py-3 text-sm text-[#636363] gap-x-3`}
                     >
-                    {handleIcons(item?.icon)}  {item?.text}
+                      {handleIcons(item?.icon)} {item?.text}
                     </button>
                   )}
                 </Menu.Item>

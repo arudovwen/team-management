@@ -18,10 +18,10 @@ export default function StatusCard({
   setCategory: (e: string) => void;
 }) {
   const [activeType, setActiveType] = useState<string>("all");
-
+  const [selected, setSelected] = useState<any>("");
   //   Get select value
   function handleSelected(value: any) {
-    console.log(value);
+    setSelected(value);
   }
   return (
     <div className="flex border border-[#E5E9EB] rounded-lg">
@@ -46,7 +46,7 @@ export default function StatusCard({
       <div className="flex-1 bg-white py-[10px] px-[22px] rounded-r-lg flex justify-between">
         <div className="flex gap-x-5 py-[14px] pl-[20px]">
           {(category === "teams" ? StatusTypes : StatusRequests).map((item) => (
-            <div
+            <button
               key={`${item.type}-${item.id}`}
               onClick={() => setActiveType(item.type)}
               className={`border  rounded-lg  py-1 px-[15px] flex flex-col cursor-pointer hover:bg-gray-50 hover:border-[#D0D5DD] relative ${
@@ -67,7 +67,7 @@ export default function StatusCard({
               <span className="text-2xl xl:text-4xl text-[#252C32] font-semibold">
                 186
               </span>
-            </div>
+            </button>
           ))}
         </div>
         <div>

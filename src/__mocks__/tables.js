@@ -4,7 +4,7 @@ export const TeamData = [
     teamName: "Team Royal",
     teamCode: "TM-01",
     description: "Leading with excellent customer se...",
-    state:  "active",
+    state: "active",
     updatedOn: new Date(),
     isNew: false,
     isNameEdited: true,
@@ -14,20 +14,20 @@ export const TeamData = [
     teamName: "Team Sunshine",
     teamCode: "TM-02",
     description: "Leading with excellent customer se...",
-    state:  "inactive",
+    state: "inactive",
     updatedOn: new Date(),
     isNew: false,
-    isNameEdited:false
+    isNameEdited: false,
   },
   {
     id: 3,
     teamName: "Team Pride",
     teamCode: "TM-03",
     description: "Leading with excellent customer se...",
-    state:  "active",
+    state: "active",
     updatedOn: new Date(),
     isNew: true,
-    isNameEdited:false
+    isNameEdited: false,
   },
 ];
 
@@ -53,7 +53,7 @@ export const RequestData = [
     request: "Deactivation of Sunshine",
     type: "Bulk Creation",
     initiator: "John wick",
-    status:  "in-review",
+    status: "in-review",
     updatedOn: new Date(),
   },
   {

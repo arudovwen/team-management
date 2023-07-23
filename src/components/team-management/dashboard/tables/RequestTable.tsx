@@ -40,18 +40,21 @@ export default function TeamTable() {
         return colorState["draft"];
     }
   }
- const creationMap = ["creation", "modification", "bulk creation"]
- const activationMap = ["activation", "reactivation"]
+  const creationMap = ["creation", "modification", "bulk creation"];
+  const activationMap = ["activation", "reactivation"];
   function handleDropdown(status: string, type: string) {
     if (!status || !type) return [];
-    const firstLevel = DropDownOptions[creationMap.includes(type.toLowerCase())?"creation":"activation"];
+    const firstLevel =
+      DropDownOptions[
+        creationMap.includes(type.toLowerCase()) ? "creation" : "activation"
+      ];
     const selectedType: any = firstLevel?.find(
       (i: any, index: any) =>
         Object.keys(i).toString().toLowerCase() === status.toLowerCase()
     );
 
     if (!selectedType) return [];
-    console.log(selectedType);
+
     return selectedType[status];
   }
 

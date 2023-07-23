@@ -1,3 +1,1 @@
-export const Permissions = {
-   
-} as const;
+export const Permissions = {} as const;

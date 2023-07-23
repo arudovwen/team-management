@@ -1,1 +1,1 @@
-declare module '@Sterling/shared';
+declare module "@Sterling/shared";

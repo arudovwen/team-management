@@ -1,1 +1,1 @@
-declare module "tables"
+declare module "tables";

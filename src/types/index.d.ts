@@ -1,17 +1,23 @@
-export type IconType = 'filter' | 'eye' | 'arrow-right' | 'open-link' | 'three-bar' | 'block';
+export type IconType =
+  | "filter"
+  | "eye"
+  | "arrow-right"
+  | "open-link"
+  | "three-bar"
+  | "block";
 
 export interface MenuItemContentsProps {
-   label: string;
-   href?: string;
+  label: string;
+  href?: string;
 }
 
 export interface ButtonProps {
-   text: string;
-   icon?: any;
-   classProps?: string;
+  text: string;
+  icon?: any;
+  classProps?: string;
 }
 
 export interface SelectProps {
-   options: array;
-   handleSelected: (value) => void
+  options: array;
+  handleSelected: (value) => void;
 }
